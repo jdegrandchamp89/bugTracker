@@ -1,0 +1,2 @@
+module BuGsHelper
+end
