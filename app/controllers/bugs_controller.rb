@@ -1,4 +1,4 @@
-class BuGsController < ApplicationController
+class BugsController < ApplicationController
   before_action :set_bug, only: [:show, :edit, :update, :destroy]
   before_action :set_issue_type
   before_action :set_priority
