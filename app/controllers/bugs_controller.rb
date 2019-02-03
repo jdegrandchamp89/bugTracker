@@ -76,13 +76,14 @@ class BugsController < ApplicationController
     end
     
     def set_issue_type
-      @issue_type = Bug.issue_types
+      @issue_types = Bug.issue_types
     end
   
     def set_priority
-      @priority = Bug.priorities
+      @priorities = Bug.priorities
     end
   
     def set_status
-      @status = Bug.statuses
+      @statuses = Bug.statuses
+    end
 end
