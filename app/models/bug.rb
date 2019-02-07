@@ -1,9 +1,9 @@
 class Bug < ApplicationRecord
   belongs_to :user
   
-  enum issue_type: [:issue, :enhancement, :feature]
+  enum issue_type: [:issue, :feature, :enhancement]
   enum priority: [:low, :medium, :high]
-  enum status: [:open, :closed, :monitor]
+  enum status: [:closed, :open, :monitor]
   
   validates :title, presence: true
   validates :description, presence: true
