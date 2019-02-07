@@ -23,17 +23,17 @@
 
   <div class="field">
     <%= form.label :issue_type %>
-    <%= form.select :issue_type, @issue_types.keys, selected: @bug.issue_type || :feature %>
+    <%= form.select :issue_type, @issue_types.keys, selected: @bug.try(:issue_type) || :feature %>
   </div>
 
   <div class="field">
     <%= form.label :priority %>
-    <%= form.select :priority, @priorities.keys, selected: @bug.priority || :medium %>
+    <%= form.select :priority, @priorities.keys, selected: @bug.try(:priority) || :medium %>
   </div>
 
   <div class="field">
     <%= form.label :status %>
-    <%= form.select :status, @statuses.keys, selected: @bug.status || :open %>
+    <%= form.select :status, @statuses.keys, selected: @bug.try(:status) || :open %>
   </div>
 
   <div class="field">
