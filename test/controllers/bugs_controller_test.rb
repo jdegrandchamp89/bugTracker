@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class BuGsControllerTest < ActionDispatch::IntegrationTest
+class BugsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @bug = bugs(:one)
   end
