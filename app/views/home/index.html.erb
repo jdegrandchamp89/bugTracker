@@ -1,0 +1,30 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>Bug Tracking</h1>
+    <p id=>Use this site to track application bugs and process them to correction.</p>
+    <p><a class="btn btn-primary btn-lg" href="https://en.wikipedia.org/wiki/Honey_bee" role="button">Learn more &raquo;</a></p>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <!-- Example row of columns -->
+  <div class="row">
+    <% @bugs.each do |bug| %>
+      <div class="col-md-4">
+        <h2>
+          <%= bug.title%>
+        </h2>
+        <p>
+          <%= bug.description.truncate_words(30)%>
+        </p>
+        <p>
+          <%= link_to 'More info >', bug, class: "btn btn-default"%>
+        </p>
+      </div>
+    <% end %>
+  </div>
+  <hr>
+  <footer>
+    <p>&copy; 2018 Company, Inc.</p>
+  </footer>
+</div>

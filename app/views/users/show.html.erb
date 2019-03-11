@@ -1,24 +1,30 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Lname:</strong>
-  <%= @user.lname %>
+<p id="notice">
+  <%= notice %>
 </p>
 
-<p>
-  <strong>Fname:</strong>
-  <%= @user.fname %>
-</p>
+<div class="container col-6">
+  <div class="row justify-content-start">
+    <div class="col-3 form-text"><strong>Lname:</strong></div>
+    <div class="col-9 form-text"><%= @user.lname %></div>
+  </div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+  <div class="row justify-content-start">
+    <div class="col-3 form-text"><strong>Fname:</strong></div>
+    <div class="col-9 form-text"><%= @user.fname %></div>
+  </div>
 
-<p>
-  <strong>Thumbnail:</strong>
-  <%= @user.thumbnail %>
-</p>
+  <div class="row justify-content-start">
+    <div class="col-3 form-text"><strong>Email:</strong></div>
+    <div class="col-9 form-text"><%= @user.email %></div>
+  </div>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+  <div class="row justify-content-start">
+    <div class="col-3 form-text"><strong>Thumbnail:</strong></div>
+    <div class="col-9 form-text"><%= @user.thumbnail %></div>
+  </div>
+
+  <div class="row justify-content-start">
+    <%= link_to 'Edit', edit_user_path(@user), :class => 'btn' %>
+      <%= link_to 'Back', users_path, :class => 'btn' %>
+  </div>
+</div>

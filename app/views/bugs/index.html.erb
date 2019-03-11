@@ -2,8 +2,8 @@
 
 <h1>Bugs</h1>
 
-<table>
-  <thead>
+<table class="table">
+  <thead class="thead-dark">
     <tr>
       <th>Last Name</th>
       <th>First Name</th>
@@ -26,9 +26,9 @@
         <td><%= bug.issue_type %></td>
         <td><%= bug.priority %></td>
         <td><%= bug.status %></td>
-        <td><%= link_to 'Show', bug %></td>
-        <td><%= link_to 'Edit', edit_bug_path(bug) %></td>
-        <td><%= link_to 'Destroy', bug, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', bug, :class => 'btn btn-sm' %></td>
+        <td><%= link_to 'Edit', edit_bug_path(bug), :class => 'btn btn-sm' %></td>
+        <td><%= link_to 'Destroy', bug, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-sm' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,5 +36,5 @@
 
 <br>
 
-<%= link_to 'New Bug', new_bug_path %>
-<%= link_to 'Show Users', users_path %>
+<%= link_to 'New Bug', new_bug_path, :class => 'btn' %>
+<%= link_to 'Show Users', users_path, :class => 'btn' %>

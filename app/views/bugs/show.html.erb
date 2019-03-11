@@ -1,39 +1,61 @@
-<p id="notice"><%= notice %></p>
+<p id="notice">
+  <%= notice %>
+</p>
 
-<p>
- <strong>Last Name:</strong>
- <%= (@bug.user.try(:lname) || "NA")%>
-</p
+<div class="container col-6">
+
+  <div class="row justify-content-start">
+    <div class="col-3 form-text"><strong>Last Name:</strong></div>
+    <div class="col-9 form-text">
+      <%= (@bug.user.try(:lname) || "NA") %>
+    </div>
+  </div>
+
+  <div class="row justify-content-start">
+    <div class="col-3 form-text"><strong>First Name:</strong></div>
+    <div class="col-9 form-text">
+      <%= (@bug.user.try(:fname) || "NA") %>
+    </div>
+  </div>
+
+  <div class="row justify-content-start">
+    <div class="col-3 form-text"><strong>Title:</strong></div>
+    <div class="col-9 form-text">
+      <%= @bug.title %>
+    </div>
+  </div>
+
+  <div class="row justify-content-start">
+    <div class="col-3 form-text"><strong>Description:</strong></div>
+    <div class="col-9 form-text">
+      <%= @bug.description %>
+    </div>
+  </div>
+
+  <div class="row justify-content-start">
+    <div class="col-3 form-text"><strong>Issue type:</strong></div>
+    <div class="col-9 form-text">
+      <%= @bug.issue_type %>
+    </div>
+  </div>
+
+  <div class="row justify-content-start">
+    <div class="col-3 form-text"><strong>Priority:</strong></div>
+    <div class="col-9 form-text">
+      <%= @bug.priority %>
+    </div>
+  </div>
+
+  <div class="row justify-content-start">
+    <div class="col-3 form-text"><strong>Status:</strong></div>
+    <div class="col-9 form-text">
+      <%= @bug.status %>
+    </div>
+  </div>
   
-<p>
- <strong>First Name:</strong>
- <%= (@bug.user.try(:fname) || "NA")%>
-</p
-  
-<p>
-  <strong>Title:</strong>
-  <%= @bug.title %>
-</p>
+  <div class="row justify-content-start">
+    <%= link_to 'Edit', edit_bug_path(@bug), :class => 'btn' %>
+    <%= link_to 'Back', bugs_path, :class => 'btn' %>
+  </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @bug.description %>
-</p>
-
-<p>
-  <strong>Issue type:</strong>
-  <%= @bug.issue_type %>
-</p>
-
-<p>
-  <strong>Priority:</strong>
-  <%= @bug.priority %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @bug.status %>
-</p>
-
-<%= link_to 'Edit', edit_bug_path(@bug) %> |
-<%= link_to 'Back', bugs_path %>
+</div>
