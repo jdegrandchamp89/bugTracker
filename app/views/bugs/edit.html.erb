@@ -2,5 +2,7 @@
 
 <%= render 'form', bug: @bug %>
 
-<%= link_to 'Show', @bug, :class => 'btn' %>
-<%= link_to 'Back', bugs_path, :class => 'btn' %>
+<div id="buttons">
+  <%= link_to 'Show', @bug, :class => 'btn' %>
+  <%= link_to 'Back', bugs_path, :class => 'btn' %>
+</div>
