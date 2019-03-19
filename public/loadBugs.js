@@ -19,6 +19,7 @@
     console.log("Click!");
 
     // Replace URL below with the URL for your server.
+    var url = location.origin;
     if(url.includes("blog-degranjo746383.codeanyapp.com")){
       ajax.open("GET", 'https://blog-degranjo746383.codeanyapp.com/bugs.json'); 
     }
