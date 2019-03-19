@@ -19,7 +19,12 @@
     console.log("Click!");
 
     // Replace URL below with the URL for your server.
-    ajax.open("GET", 'https://blog-degranjo746383.codeanyapp.com/bugs.json');
+    if(url.includes("blog-degranjo746383.codeanyapp.com")){
+      ajax.open("GET", 'https://blog-degranjo746383.codeanyapp.com/bugs.json'); 
+    }
+    else{
+      ajax.open("GET", 'https://jrd-bugtracker.herokuapp.com/bugs.json');
+    }
     ajax.onreadystatechange = function () {
       console.log("Ajax state: " + ajax.readyState);
       if (ajax.readyState === 4 && ajax.status === 200) {
