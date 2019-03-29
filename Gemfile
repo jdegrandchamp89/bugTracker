@@ -39,8 +39,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 
-gem 'rack-cors', :require => 'rack/cors'
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -55,6 +53,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+  
+  gem 'rack-cors', :require => 'rack/cors'
 end
 
 group :test do
@@ -65,6 +65,8 @@ group :test do
   gem 'chromedriver-helper'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+  
+  gem 'rack-cors', :require => 'rack/cors'
 end
 
 group :production do
