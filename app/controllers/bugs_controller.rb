@@ -10,7 +10,7 @@ class BugsController < ApplicationController
     @bugs = Bug.all
     respond_to do |format|
       format.html {render :index}
-      format.json {render :index, status: :ok}
+      format.json {render :index, status: :ok, :include => [:user] }
       format.xml {render xml: @bugs.as_json}
     end
   end
